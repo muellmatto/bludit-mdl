@@ -10,8 +10,8 @@
     <?php Theme::plugins('siteBodyBegin') ?>   
 
 
-                                                <!-- teal blue-grey deep-purple" -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-color--teal" id="BackgroundId">                 <!-- Layout --> 
+                                                <!-- mdl-color: teal blue-grey deep-purple" -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" id="BackgroundId">                 <!-- Layout --> 
         <header class="mdl-layout__header" id="ForegroundId1">
             <div class="mdl-layout__header-row" id="ForegroundId2">
                 <span class="mdl-layout-title">                                     <!-- Title -->
@@ -74,7 +74,8 @@
                         "red",
                         "pink",
                         "purple",
-                        "deep-purple");
+                        "deep-purple",
+                        "white");
         foreach($layers as $layer) {
 
             foreach($colors as $color) {
@@ -124,6 +125,7 @@
                                     echo '<a class="mdl-navigation__link" href="'.$Parent->permalink().'">'.'<i class="material-icons">'.$icon.'</i> '.$Parent->title().'</a>';
                             }
                         ?>
+                        <a class="mdl-navigation__link" href="<?php echo $Site->url() ?>admin"><i class="material-icons">vpn_key</i>Login</a>';
             </nav>
         </div>
 
