@@ -10,11 +10,13 @@
     <?php Theme::plugins('siteBodyBegin') ?>   
 
 
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="background: lightgrey;">                 <!-- Layout --> 
-        <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
+                                                <!-- teal blue-grey deep-purple" -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-color--teal" id="BackgroundId">                 <!-- Layout --> 
+        <header class="mdl-layout__header" id="ForegroundId1">
+            <div class="mdl-layout__header-row" id="ForegroundId2">
                 <span class="mdl-layout-title">                                     <!-- Title -->
                     <a href="<?php echo $Site->url() ?>" style="color: white; text-decoration: none;">
+                        <i class="material-icons">home</i>
                         <?php echo $Site->title() ?>
                     </a>
                 </span>
@@ -23,6 +25,76 @@
                 <!--nav class="mdl-navigation" -->                                     <!-- Menu in der Leiste -->
                     <!-- a class="mdl-navigation__link" href="">Kontakt</a -->
                 <!-- /nav -->
+
+
+
+
+<script>
+    function changeForegroundColorTo(color) {
+        document.getElementById('ForegroundId1').className = "mdl-layout__header mdl-color--" + color ; 
+        document.getElementById('ForegroundId2').className = "mdl-layout__header-row mdl-color--" + color ; 
+    }
+    function changeBackgroundColorTo(color) {
+        document.getElementById('BackgroundId').className = "mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-color--" + color ; 
+    }
+
+
+</script>
+
+
+
+<!-- Right aligned menu below button -->
+<button id="demo-menu-lower-right"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">more_vert</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-right">
+    <?php 
+
+        $layers = array("Foreground",
+                        "Background");
+
+        $colors = array("indigo",
+                        "blue",
+                        "light-blue",
+                        "cyan",
+                        "teal",
+                        "green",
+                        "light-green",
+                        "lime",
+                        "yellow",
+                        "amber",
+                        "orange",
+                        "brown",
+                        "blue-grey",
+                        "grey",
+                        "deep-orange",
+                        "red",
+                        "pink",
+                        "purple",
+                        "deep-purple");
+        foreach($layers as $layer) {
+
+            foreach($colors as $color) {
+                echo '<li class="mdl-menu__item mdl-color--'.$color.'" onclick="change'.$layer.'ColorTo('."'" .$color. "'".')">'.$color.'</li>';
+            }
+
+        }
+    ?>
+
+</ul>
+
+
+
+
+
+
+
+
+
+
             </div>
         </header>
         <div class="mdl-layout__drawer">                                            <!-- Sidemenu -->

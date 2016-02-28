@@ -22,7 +22,8 @@
     <link href='//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=de' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-red.min.css" />
+                                                                    <!-- teal-red indigo-red -->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.teal-red.min.css" />
     <?php
 	    // CSS from theme/css/
 	    Theme::css(array(
