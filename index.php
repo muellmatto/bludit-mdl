@@ -102,15 +102,28 @@
                 MENU
             </span>
             <nav class="mdl-navigation">
-                        <a class="mdl-navigation__link" href="<?php echo $Site->url() ?>blog">Neuigkeiten</a>
+                        <a class="mdl-navigation__link" href="<?php echo $Site->url() ?>blog"><i class="material-icons">date_range</i> Neuigkeiten</a>
                         <?php
                             //  pages
                             $parents = $pagesParents[NO_PARENT_CHAR];
                             foreach($parents as $Parent) {
-                                echo '<a class="mdl-navigation__link" href="'.$Parent->permalink().'">'.$Parent->title().'</a>';
+                                if($Parent->title()=='SeHT Münster e.V.') {
+                                    $icon='home';
+                                } elseif($Parent->title()=='Team') {
+                                    $icon='face';
+                                } elseif($Parent->title()=='Angebote') {
+                                    $icon='group';
+                                } elseif($Parent->title()=='Downloads') {
+                                    $icon='get_app';
+                                } elseif($Parent->title()=='Kontakt') {
+                                    // $icon='account_circle';
+                                    $icon='contact_phone';
+                                } else {
+                                    $icon='info';
+                                }
+                                    echo '<a class="mdl-navigation__link" href="'.$Parent->permalink().'">'.'<i class="material-icons">'.$icon.'</i> '.$Parent->title().'</a>';
                             }
                         ?>
-                        <li class="mdl-navigation__link" href="<?php echo $Site->url() ?>blog">Neuigkeiten</li>
             </nav>
         </div>
 
