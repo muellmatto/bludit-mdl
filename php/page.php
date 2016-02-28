@@ -48,12 +48,14 @@
             if ( document.getElementById('FontToggleId').innerHTML == "format_size" ) {
                 document.getElementById('FontToggleId').innerHTML = "text_fields";
 				for (var i = 0; i < LISTE.length; i++) {
-                	LISTE[i].style.fontSize = "4rem";
+                	// LISTE[i].style.fontSize = "4rem";
+                    LISTE[i].className = "mdl-typography--display-1"
 				}
             } else {
                 document.getElementById('FontToggleId').innerHTML = "format_size";
 				for (var i = 0; i < LISTE.length; i++) {
-                	LISTE[i].style.fontSize = "2rem";
+                	// LISTE[i].style.fontSize = "2rem";
+                    LISTE[i].className = "mdl-typography--body-1"
 				}
             }
         }
