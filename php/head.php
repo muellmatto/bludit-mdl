@@ -7,17 +7,18 @@
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" sizes="192x192" href="<?php echo HTML_PATH_THEME_IMG ?>seht-192.png">
+    <meta name="theme-color" content="#03A9F4">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#03A9F4">
+    <meta name="apple-mobile-web-app-title" content="SeHT Münster">
     <link rel="apple-touch-icon-precomposed" href="<?php echo HTML_PATH_THEME_IMG ?>seht-128.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="<?php echo HTML_PATH_THEME_IMG ?>seht-144.png">
-    <meta name="msapplication-TileColor" content="#8EA5C2">
-
+    <meta name="msapplication-TileColor" content="#03A9F4">
+    <meta name="msapplication-navbutton-color" content="#03A9F4">
 
     <link href='//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=de' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
