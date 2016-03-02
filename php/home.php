@@ -20,7 +20,7 @@
             <?php
                 echo $Post->date();
                 // Call the method with FALSE to get the first part of the post
-                // echo $Post->content(false)
+                echo $Post->content(false)
             ?>
         </div>
 
