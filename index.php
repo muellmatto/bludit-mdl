@@ -100,6 +100,7 @@
         </header>
         <div class="mdl-layout__drawer">                                            <!-- Sidemenu -->
             <span class="mdl-layout-title">
+                <img src="<?php echo HTML_PATH_THEME_IMG ?>seht-128.png" style="width: 30%; height: auto;" alt="Logo SeHT Münster e.V.">
                 MENU
             </span>
             <nav class="mdl-navigation">
@@ -125,7 +126,7 @@
                                     echo '<a class="mdl-navigation__link" href="'.$Parent->permalink().'">'.'<i class="material-icons">'.$icon.'</i> '.$Parent->title().'</a>';
                             }
                         ?>
-                        <a class="mdl-navigation__link" href="<?php echo $Site->url() ?>admin"><i class="material-icons">vpn_key</i>Login</a>';
+                        <a class="mdl-navigation__link" href="<?php echo $Site->url() ?>admin"><i class="material-icons">vpn_key</i>Login</a>
             </nav>
         </div>
 
