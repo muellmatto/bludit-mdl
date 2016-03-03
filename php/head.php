@@ -51,5 +51,66 @@
 	    }
     ?>
 
+
+<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+
+<script type="text/javascript">
+
+        function startSpeech() {
+            var text = [];
+            text = document.getElementsByTagName("inhalt");
+            lies = text[0].textContent;
+            // alert(lies);
+            /* var hallo = new SpeechSynthesisUtterance(lies);
+            hallo.lang = "de-DE";
+            window.speechSynthesis.speak(hallo); */
+            responsiveVoice.speak(lies, "Deutsch Female");
+        }
+    
+        function stopSpeech() {
+            // window.speechSynthesis.cancel();
+            responsiveVoice.cancel();
+        }
+        
+        function toggleSpeech() {
+            // STARTICON = "play_arrow"
+            // STOPICON = "stop"
+
+            // STARTICON = "mic"
+            // STOPICON = "mic_off"
+            
+            STARTICON = "hearing"
+            // STARTICON = "volume_up"
+            STOPICON = "volume_off"
+
+            if ( document.getElementById('SpeechToggleId').innerHTML == STARTICON ) {
+                document.getElementById('SpeechToggleId').innerHTML = STOPICON;
+                startSpeech();
+            } else {
+                document.getElementById('SpeechToggleId').innerHTML = STARTICON;
+                stopSpeech();
+            }
+        }
+
+
+        function toggleFont() {
+            var LISTE = document.getElementsByTagName("inhalt")[0].getElementsByTagName("*");
+            if ( document.getElementById('FontToggleId').innerHTML == "format_size" ) {
+                document.getElementById('FontToggleId').innerHTML = "text_fields";
+                for (var i = 0; i < LISTE.length; i++) {
+                    LISTE[i].className = "mdl-typography--display-1";
+                }
+                document.getElementsByTagName("inhalt")[0].className = "mdl-typography--display-4";
+            } else {
+                document.getElementById('FontToggleId').innerHTML = "format_size";
+                for (var i = 0; i < LISTE.length; i++) {
+                    LISTE[i].className = "";
+                }
+            }
+        }
+
+</script>
+
+
     <!-- Plugins Site Head -->
     <?php Theme::plugins('siteHead') ?>

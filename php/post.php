@@ -1,74 +1,9 @@
 <!-- Plugins Page Begin -->
 <?php Theme::plugins('postBegin') ?>
 
-<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
-
-<script type="text/javascript">
-
-        function startSpeech() {
-            var text = [];
-            text = document.getElementsByTagName("inhalt");
-            lies = text[0].textContent;
-            // alert(lies);
-            /* var hallo = new SpeechSynthesisUtterance(lies);
-            hallo.lang = "de-DE";
-            window.speechSynthesis.speak(hallo); */
-            responsiveVoice.speak(lies, "Deutsch Female");
-        }
-    
-        function stopSpeech() {
-            // window.speechSynthesis.cancel();
-            responsiveVoice.cancel();
-        }
-        
-        function toggleSpeech() {
-            // STARTICON = "play_arrow"
-            // STOPICON = "stop"
-
-            // STARTICON = "mic"
-            // STOPICON = "mic_off"
-            
-            STARTICON = "hearing"
-            // STARTICON = "volume_up"
-            STOPICON = "volume_off"
-
-            if ( document.getElementById('SpeechToggleId').innerHTML == STARTICON ) {
-                document.getElementById('SpeechToggleId').innerHTML = STOPICON;
-                startSpeech();
-            } else {
-                document.getElementById('SpeechToggleId').innerHTML = STARTICON;
-                stopSpeech();
-            }
-        }
-
-
-        function toggleFont() {
-			// var LISTE = document.getElementById("PageContentId").getElementsByTagName("P");
-			var LISTE = document.getElementById("PostContentId").getElementsByTagName("*");
-            if ( document.getElementById('FontToggleId').innerHTML == "format_size" ) {
-                document.getElementById('FontToggleId').innerHTML = "text_fields";
-				for (var i = 0; i < LISTE.length; i++) {
-                	// LISTE[i].style.fontSize = "4rem";
-                    LISTE[i].className = "mdl-typography--display-1"
-				}
-            } else {
-                document.getElementById('FontToggleId').innerHTML = "format_size";
-				for (var i = 0; i < LISTE.length; i++) {
-                	// LISTE[i].style.fontSize = "2rem";
-                    LISTE[i].className = "mdl-typography--body-1"
-				}
-            }
-        }
-
-</script>
-
-
-
 <div class="mdl-cell mdl-cell--2-col"></div>
 
 <div class="mdl-cell mdl-cell--8-col">
-
-
     <div class="seht-card mdl-card mdl-shadow--4dp">
 
         <div class="mdl-card__title">
@@ -77,12 +12,11 @@
             </h2>
         </div>
 
-        <div class="mdl-card__supporting-text" id="PostContentId">
+        <div class="mdl-card__supporting-text">
             <inhalt>
                 <?php echo $Post->content() ?>
             </inhalt>
         </div>
-
 
         <div class="mdl-card__menu">
             <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="toggleFont()">
@@ -98,12 +32,8 @@
         </div>
 
     </div>
-
-
 </div>
 
 <div class="mdl-cell mdl-cell--2-col"></div>
 
-
 <?php Theme::plugins('postEnd') ?>
-
