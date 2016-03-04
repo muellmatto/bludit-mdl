@@ -100,7 +100,6 @@
                 for (var i = 0; i < LISTE.length; i++) {
                     LISTE[i].className = "mdl-typography--display-1";
                 }
-                document.getElementsByTagName("inhalt")[0].className = "mdl-typography--display-4";
             } else {
                 document.getElementById('FontToggleId').innerHTML = "format_size";
                 for (var i = 0; i < LISTE.length; i++) {
