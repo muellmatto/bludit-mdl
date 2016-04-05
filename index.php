@@ -11,7 +11,7 @@
 
 
                                                 <!-- mdl-color: teal blue-grey deep-purple" -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" id="BackgroundId">                 <!-- Layout --> 
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-color--grey" id="BackgroundId">                 <!-- Layout --> 
         <header class="mdl-layout__header" id="ForegroundId1">
             <div class="mdl-layout__header-row" id="ForegroundId2">
                 <span class="mdl-layout-title">                                     <!-- Title -->
