@@ -19,10 +19,10 @@
         </div>
 
         <div class="mdl-card__menu">
-            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="toggleFont()">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--primary mdl-js-ripple-effect" onclick="toggleFont()">
                 <i class="material-icons" id="FontToggleId">format_size</i>
             </button>
-            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="toggleSpeech()">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--primary mdl-js-ripple-effect" onclick="toggleSpeech()">
                 <i class="material-icons" id="SpeechToggleId">hearing</i>
             </button>
         </div>
