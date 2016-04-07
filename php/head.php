@@ -7,18 +7,18 @@
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" sizes="192x192" href="<?php echo HTML_PATH_THEME_IMG ?>seht-192.png">
-    <meta name="theme-color" content="#03A9F4">
+    <meta name="theme-color" content="#004494">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#03A9F4">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#004494">
     <meta name="apple-mobile-web-app-title" content="SeHT Münster">
     <link rel="apple-touch-icon-precomposed" href="<?php echo HTML_PATH_THEME_IMG ?>seht-128.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="<?php echo HTML_PATH_THEME_IMG ?>seht-144.png">
-    <meta name="msapplication-TileColor" content="#03A9F4">
-    <meta name="msapplication-navbutton-color" content="#03A9F4">
+    <meta name="msapplication-TileColor" content="#004494">
+    <meta name="msapplication-navbutton-color" content="#004494">
 
     <link href='//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=de' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -28,8 +28,7 @@
     <?php
 	    // CSS from theme/css/
 	    Theme::css(array(
-            'material.seht.css',
-            'styles.css'
+            'material.seht.css'
 	    ));
 
 	    // Javascript from theme/js/
