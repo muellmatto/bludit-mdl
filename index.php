@@ -11,12 +11,12 @@
 
 
                                                 <!-- mdl-color: teal blue-grey deep-purple" -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-color--grey">                 <!-- Layout --> 
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="background-color: rgb(156,158,159);">                 <!-- Layout --> 
         <header class="mdl-layout__header" id="ForegroundId1">
             <div class="mdl-layout__header-row" id="ForegroundId2">
                 <span class="mdl-layout-title">                                     <!-- Title -->
                     <a href="<?php echo $Site->url() ?>" style="color: white; text-decoration: none;">
-                        <img src="<?php echo HTML_PATH_THEME_IMG ?>SeHT_Logo_Mannchen.jpg" style="width: auto; height: 32px;" alt="Logo SeHT Münster e.V.">
+                        <img src="<?php echo HTML_PATH_THEME_IMG ?>seht_icon.svg" style="width: auto; height: 42px;" alt="Logo SeHT Münster e.V.">
                         <!-- i class="material-icons">home</i -->
                         <?php echo $Site->title() ?>
                     </a>
@@ -38,7 +38,7 @@
         </header>
         <div class="mdl-layout__drawer">                                            <!-- Sidemenu -->
             <span class="mdl-layout-title">
-                <img src="<?php echo HTML_PATH_THEME_IMG ?>seht-128.png" style="width: 30%; height: auto;" alt="Logo SeHT Münster e.V.">
+                <img src="<?php echo HTML_PATH_THEME_IMG ?>seht_icon.svg" style="width: 30%; height: auto;" alt="Logo SeHT Münster e.V.">
                 MENU
             </span>
             <nav class="mdl-navigation">
