@@ -10,6 +10,14 @@ SeHT-Rot
 SeHT-Grau
 156/158/159 rgb
 
+
+
+$color-primary: "0,68,148";
+$color-primary-dark: "0,34,74";
+$color-primary-contrast: "255,0,0";
+$color-accent: "156,158,159";
+$color-accent-contrast: "0,0,0";
+
 */
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
@@ -3039,10 +3047,10 @@ ul, ol {
   color: rgb(255,255,255) !important; }
 
 .mdl-color--primary {
-  background-color: rgb(0,68,148) !important; }
+  background-color: rgb(255,255,255) !important; }
 
 .mdl-color--primary-contrast {
-  background-color: rgb(255,0,0) !important; }
+  background-color: rgb(0,68,148) !important; }
 
 .mdl-color--primary-dark {
   background-color: rgb(0,34,74) !important; }
@@ -3051,13 +3059,13 @@ ul, ol {
   background-color: rgb(156,158,159) !important; }
 
 .mdl-color--accent-contrast {
-  background-color: rgb(0,0,0) !important; }
+  background-color: rgb(255,0,0) !important; }
 
 .mdl-color-text--primary {
-  color: rgb(0,68,148) !important; }
+  color: rgb(255,255,255) !important; }
 
 .mdl-color-text--primary-contrast {
-  color: rgb(255,0,0) !important; }
+  color: rgb(0,68,148) !important; }
 
 .mdl-color-text--primary-dark {
   color: rgb(0,34,74) !important; }
@@ -3066,7 +3074,7 @@ ul, ol {
   color: rgb(156,158,159) !important; }
 
 .mdl-color-text--accent-contrast {
-  color: rgb(0,0,0) !important; }
+  color: rgb(255,0,0) !important; }
 
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
@@ -3619,13 +3627,13 @@ ul, ol {
     height: 22px;
     border-radius: 50%;
     background: rgb(156,158,159);
-    color: rgb(0,0,0); }
+    color: rgb(255,0,0); }
     .mdl-button .mdl-badge[data-badge]:after {
       top: -10px;
       right: -5px; }
   .mdl-badge.mdl-badge--no-background[data-badge]:after {
     color: rgb(156,158,159);
-    background: rgba(0,0,0,0.2);
+    background: rgba(255,0,0,0.2);
     box-shadow: 0 0 1px gray; }
   .mdl-badge.mdl-badge--overlap {
     margin-right: 10px; }
@@ -3852,7 +3860,7 @@ ul, ol {
   .mdl-button:active {
     background-color: rgba(158,158,158, 0.40); }
   .mdl-button.mdl-button--colored {
-    color: rgb(0,68,148); }
+    color: rgb(255,255,255); }
     .mdl-button.mdl-button--colored:focus:not(:active) {
       background-color: rgba(0,0,0, 0.12); }
 
@@ -3869,16 +3877,16 @@ input.mdl-button[type="submit"] {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
     background-color: rgba(158,158,158, 0.40); }
   .mdl-button--raised.mdl-button--colored {
-    background: rgb(0,68,148);
-    color: rgb(255,0,0); }
+    background: rgb(255,255,255);
+    color: rgb(0,68,148); }
     .mdl-button--raised.mdl-button--colored:hover {
-      background-color: rgb(0,68,148); }
+      background-color: rgb(255,255,255); }
     .mdl-button--raised.mdl-button--colored:active {
-      background-color: rgb(0,68,148); }
+      background-color: rgb(255,255,255); }
     .mdl-button--raised.mdl-button--colored:focus:not(:active) {
-      background-color: rgb(0,68,148); }
+      background-color: rgb(255,255,255); }
     .mdl-button--raised.mdl-button--colored .mdl-ripple {
-      background: rgb(255,0,0); }
+      background: rgb(0,68,148); }
 
 .mdl-button--fab {
   border-radius: 50%;
@@ -3915,7 +3923,7 @@ input.mdl-button[type="submit"] {
     background-color: rgba(158,158,158, 0.40); }
   .mdl-button--fab.mdl-button--colored {
     background: rgb(156,158,159);
-    color: rgb(0,0,0); }
+    color: rgb(255,0,0); }
     .mdl-button--fab.mdl-button--colored:hover {
       background-color: rgb(156,158,159); }
     .mdl-button--fab.mdl-button--colored:focus:not(:active) {
@@ -3923,7 +3931,7 @@ input.mdl-button[type="submit"] {
     .mdl-button--fab.mdl-button--colored:active {
       background-color: rgb(156,158,159); }
     .mdl-button--fab.mdl-button--colored .mdl-ripple {
-      background: rgb(0,0,0); }
+      background: rgb(255,0,0); }
 
 .mdl-button--icon {
   border-radius: 50%;
@@ -3968,19 +3976,19 @@ input.mdl-button[type="submit"] {
     background-color: transparent; }
 
 .mdl-button--primary.mdl-button--primary {
-  color: rgb(0,68,148); }
+  color: rgb(255,255,255); }
   .mdl-button--primary.mdl-button--primary .mdl-ripple {
-    background: rgb(255,0,0); }
+    background: rgb(0,68,148); }
   .mdl-button--primary.mdl-button--primary.mdl-button--raised, .mdl-button--primary.mdl-button--primary.mdl-button--fab {
-    color: rgb(255,0,0);
-    background-color: rgb(0,68,148); }
+    color: rgb(0,68,148);
+    background-color: rgb(255,255,255); }
 
 .mdl-button--accent.mdl-button--accent {
   color: rgb(156,158,159); }
   .mdl-button--accent.mdl-button--accent .mdl-ripple {
-    background: rgb(0,0,0); }
+    background: rgb(255,0,0); }
   .mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
-    color: rgb(0,0,0);
+    color: rgb(255,0,0);
     background-color: rgb(156,158,159); }
 
 .mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled {
@@ -4474,7 +4482,7 @@ input.mdl-button[type="submit"] {
   border-radius: 2px;
   z-index: 2; }
   .mdl-checkbox.is-checked .mdl-checkbox__box-outline {
-    border: 2px solid rgb(0,68,148); }
+    border: 2px solid rgb(255,255,255); }
   fieldset[disabled] .mdl-checkbox .mdl-checkbox__box-outline, .mdl-checkbox.is-disabled .mdl-checkbox__box-outline {
     border: 2px solid rgba(0,0,0, 0.26);
     cursor: auto; }
@@ -4493,8 +4501,8 @@ input.mdl-button[type="submit"] {
     box-shadow: 0 0 0px 8px rgba(0, 0, 0, 0.1);
     background-color: rgba(0, 0, 0, 0.1); }
   .mdl-checkbox.is-focused.is-checked .mdl-checkbox__focus-helper {
-    box-shadow: 0 0 0px 8px rgba(0,68,148, 0.26);
-    background-color: rgba(0,68,148, 0.26); }
+    box-shadow: 0 0 0px 8px rgba(255,255,255, 0.26);
+    background-color: rgba(255,255,255, 0.26); }
 
 .mdl-checkbox__tick-outline {
   position: absolute;
@@ -4508,7 +4516,7 @@ input.mdl-button[type="submit"] {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background; }
   .mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
-    background: rgb(0,68,148) url("/images/tick.svg?embed"); }
+    background: rgb(255,255,255) url("/images/tick.svg?embed"); }
   fieldset[disabled] .mdl-checkbox.is-checked .mdl-checkbox__tick-outline, .mdl-checkbox.is-checked.is-disabled .mdl-checkbox__tick-outline {
     background: rgba(0,0,0, 0.26) url("/images/tick.svg?embed"); }
 
@@ -4535,7 +4543,7 @@ input.mdl-button[type="submit"] {
   overflow: hidden;
   -webkit-mask-image: -webkit-radial-gradient(circle, white, black); }
   .mdl-checkbox__ripple-container .mdl-ripple {
-    background: rgb(0,68,148); }
+    background: rgb(255,255,255); }
   fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container, .mdl-checkbox.is-disabled .mdl-checkbox__ripple-container {
     cursor: auto; }
   fieldset[disabled] .mdl-checkbox .mdl-checkbox__ripple-container .mdl-ripple, .mdl-checkbox.is-disabled .mdl-checkbox__ripple-container .mdl-ripple {
@@ -5858,7 +5866,7 @@ input.mdl-button[type="submit"] {
     line-height: 32px;
     font-size: 24px; }
   .mdl-icon-toggle.is-checked .mdl-icon-toggle__label {
-    color: rgb(0,68,148); }
+    color: rgb(255,255,255); }
   .mdl-icon-toggle.is-disabled .mdl-icon-toggle__label {
     color: rgba(0,0,0, 0.26);
     cursor: auto;
@@ -5866,7 +5874,7 @@ input.mdl-button[type="submit"] {
   .mdl-icon-toggle.is-focused .mdl-icon-toggle__label {
     background-color: rgba(0,0,0, 0.12); }
   .mdl-icon-toggle.is-focused.is-checked .mdl-icon-toggle__label {
-    background-color: rgba(0,68,148, 0.26); }
+    background-color: rgba(255,255,255, 0.26); }
 
 .mdl-icon-toggle__ripple-container {
   position: absolute;
@@ -6684,12 +6692,12 @@ input.mdl-button[type="submit"] {
   transition: width 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
 
 .mdl-progress > .progressbar {
-  background-color: rgb(0,68,148);
+  background-color: rgb(255,255,255);
   z-index: 1;
   left: 0; }
 
 .mdl-progress > .bufferbar {
-  background-image: linear-gradient(to right, rgba(255,0,0, 0.7), rgba(255,0,0, 0.7)), linear-gradient(to right, rgb(0,68,148), rgb(0,68,148));
+  background-image: linear-gradient(to right, rgba(0,68,148, 0.7), rgba(0,68,148, 0.7)), linear-gradient(to right, rgb(255,255,255), rgb(255,255,255));
   z-index: 0;
   left: 0; }
 
@@ -6699,15 +6707,15 @@ input.mdl-button[type="submit"] {
 @supports (-webkit-appearance: none) {
   .mdl-progress:not(.mdl-progress--indeterminate):not(.mdl-progress--indeterminate) > .auxbar,
   .mdl-progress:not(.mdl-progress__indeterminate):not(.mdl-progress__indeterminate) > .auxbar {
-    background-image: linear-gradient(to right, rgba(255,0,0, 0.7), rgba(255,0,0, 0.7)), linear-gradient(to right, rgb(0,68,148), rgb(0,68,148));
+    background-image: linear-gradient(to right, rgba(0,68,148, 0.7), rgba(0,68,148, 0.7)), linear-gradient(to right, rgb(255,255,255), rgb(255,255,255));
     mask: url("/images/buffer.svg?embed"); } }
 .mdl-progress:not(.mdl-progress--indeterminate) > .auxbar,
 .mdl-progress:not(.mdl-progress__indeterminate) > .auxbar {
-  background-image: linear-gradient(to right, rgba(255,0,0, 0.9), rgba(255,0,0, 0.9)), linear-gradient(to right, rgb(0,68,148), rgb(0,68,148)); }
+  background-image: linear-gradient(to right, rgba(0,68,148, 0.9), rgba(0,68,148, 0.9)), linear-gradient(to right, rgb(255,255,255), rgb(255,255,255)); }
 
 .mdl-progress.mdl-progress--indeterminate > .bar1,
 .mdl-progress.mdl-progress__indeterminate > .bar1 {
-  background-color: rgb(0,68,148);
+  background-color: rgb(255,255,255);
   animation-name: indeterminate1;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -6716,7 +6724,7 @@ input.mdl-button[type="submit"] {
 .mdl-progress.mdl-progress--indeterminate > .bar3,
 .mdl-progress.mdl-progress__indeterminate > .bar3 {
   background-image: none;
-  background-color: rgb(0,68,148);
+  background-color: rgb(255,255,255);
   animation-name: indeterminate2;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -7058,11 +7066,11 @@ input.mdl-button[type="submit"] {
   margin: 10px 12px;
   top: 0;
   left: 0;
-  color: rgb(255,0,0);
+  color: rgb(0,68,148);
   z-index: 4; }
   .mdl-layout__header .mdl-layout__drawer-button {
     position: absolute;
-    color: rgb(255,0,0);
+    color: rgb(0,68,148);
     background-color: inherit; }
     @media screen and (max-width: 1024px) {
       .mdl-layout__header .mdl-layout__drawer-button {
@@ -7093,8 +7101,8 @@ input.mdl-button[type="submit"] {
   min-height: 64px;
   max-height: 1000px;
   z-index: 3;
-  background-color: rgb(0,68,148);
-  color: rgb(255,0,0);
+  background-color: rgb(255,255,255);
+  color: rgb(0,68,148);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -7194,7 +7202,7 @@ input.mdl-button[type="submit"] {
         height: 56px; } }
   .mdl-layout__header-row .mdl-navigation__link {
     display: block;
-    color: rgb(255,0,0);
+    color: rgb(0,68,148);
     line-height: 64px;
     padding: 0 24px; }
     @media screen and (max-width: 1024px) {
@@ -7254,7 +7262,7 @@ input.mdl-button[type="submit"] {
   width: calc(100% - 112px);
   padding: 0 0 0 56px;
   display: flex;
-  background-color: rgb(0,68,148);
+  background-color: rgb(255,255,255);
   overflow-y: hidden;
   overflow-x: scroll; }
   .mdl-layout__tab-bar::-webkit-scrollbar {
@@ -7301,7 +7309,7 @@ input.mdl-button[type="submit"] {
   width: 56px;
   z-index: 4;
   text-align: center;
-  background-color: rgb(0,68,148);
+  background-color: rgb(255,255,255);
   color: transparent;
   cursor: pointer;
   user-select: none; }
@@ -7319,7 +7327,7 @@ input.mdl-button[type="submit"] {
   .mdl-layout__tab-bar-button .material-icons {
     line-height: 48px; }
   .mdl-layout__tab-bar-button.is-active {
-    color: rgb(255,0,0); }
+    color: rgb(0,68,148); }
 
 .mdl-layout__tab-bar-left-button {
   left: 0; }
@@ -7343,7 +7351,7 @@ input.mdl-button[type="submit"] {
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
-  color: rgba(255,0,0, 0.6);
+  color: rgba(0,68,148, 0.6);
   overflow: hidden; }
   @media screen and (max-width: 1024px) {
     .mdl-layout__tab {
@@ -7353,7 +7361,7 @@ input.mdl-button[type="submit"] {
     flex-grow: 1;
     padding: 0; }
   .mdl-layout.is-upgraded .mdl-layout__tab.is-active {
-    color: rgb(255,0,0); }
+    color: rgb(0,68,148); }
   .mdl-layout.is-upgraded .mdl-layout__tab.is-active::after {
     height: 2px;
     width: 100%;
@@ -7375,7 +7383,7 @@ input.mdl-button[type="submit"] {
     z-index: 1;
     overflow: hidden; }
     .mdl-layout__tab .mdl-layout__tab-ripple-container .mdl-ripple {
-      background-color: rgb(255,0,0); }
+      background-color: rgb(0,68,148); }
 
 .mdl-layout__tab-panel {
   display: block; }
@@ -7609,7 +7617,7 @@ input.mdl-button[type="submit"] {
   border-radius: 50%;
   z-index: 2; }
   .mdl-radio.is-checked .mdl-radio__outer-circle {
-    border: 2px solid rgb(0,68,148); }
+    border: 2px solid rgb(255,255,255); }
   .mdl-radio__outer-circle fieldset[disabled] .mdl-radio, .mdl-radio.is-disabled .mdl-radio__outer-circle {
     border: 2px solid rgba(0,0,0, 0.26);
     cursor: auto; }
@@ -7629,7 +7637,7 @@ input.mdl-button[type="submit"] {
   transition-property: transform;
   transform: scale3d(0, 0, 0);
   border-radius: 50%;
-  background: rgb(0,68,148); }
+  background: rgb(255,255,255); }
   .mdl-radio.is-checked .mdl-radio__inner-circle {
     transform: scale3d(1, 1, 1); }
   fieldset[disabled] .mdl-radio .mdl-radio__inner-circle, .mdl-radio.is-disabled .mdl-radio__inner-circle {
@@ -7657,7 +7665,7 @@ input.mdl-button[type="submit"] {
   overflow: hidden;
   -webkit-mask-image: -webkit-radial-gradient(circle, white, black); }
   .mdl-radio__ripple-container .mdl-ripple {
-    background: rgb(0,68,148); }
+    background: rgb(255,255,255); }
   fieldset[disabled] .mdl-radio .mdl-radio__ripple-container, .mdl-radio.is-disabled .mdl-radio__ripple-container {
     cursor: auto; }
   fieldset[disabled] .mdl-radio .mdl-radio__ripple-container .mdl-ripple, .mdl-radio.is-disabled .mdl-radio__ripple-container .mdl-ripple {
@@ -7848,7 +7856,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     user-select: none;
     outline: 0;
     padding: 0;
-    color: rgb(0,68,148);
+    color: rgb(255,255,255);
     align-self: center;
     z-index: 1;
     cursor: pointer;
@@ -7873,7 +7881,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
       border: none; }
     .mdl-slider.is-upgraded::-ms-fill-lower {
       padding: 0;
-      background: linear-gradient(to right, transparent, transparent 16px, rgb(0,68,148) 16px, rgb(0,68,148) 0); }
+      background: linear-gradient(to right, transparent, transparent 16px, rgb(255,255,255) 16px, rgb(255,255,255) 0); }
     .mdl-slider.is-upgraded::-ms-fill-upper {
       padding: 0;
       background: linear-gradient(to left, transparent, transparent 16px, rgba(0,0,0, 0.26) 16px, rgba(0,0,0, 0.26) 0); }
@@ -7883,7 +7891,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
       height: 12px;
       box-sizing: border-box;
       border-radius: 50%;
-      background: rgb(0,68,148);
+      background: rgb(255,255,255);
       border: none;
       transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), border 0.18s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1); }
     .mdl-slider.is-upgraded::-moz-range-thumb {
@@ -7893,33 +7901,33 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
       box-sizing: border-box;
       border-radius: 50%;
       background-image: none;
-      background: rgb(0,68,148);
+      background: rgb(255,255,255);
       border: none; }
     .mdl-slider.is-upgraded:focus:not(:active)::-webkit-slider-thumb {
-      box-shadow: 0 0 0 10px rgba(0,68,148, 0.26); }
+      box-shadow: 0 0 0 10px rgba(255,255,255, 0.26); }
     .mdl-slider.is-upgraded:focus:not(:active)::-moz-range-thumb {
-      box-shadow: 0 0 0 10px rgba(0,68,148, 0.26); }
+      box-shadow: 0 0 0 10px rgba(255,255,255, 0.26); }
     .mdl-slider.is-upgraded:active::-webkit-slider-thumb {
       background-image: none;
-      background: rgb(0,68,148);
+      background: rgb(255,255,255);
       transform: scale(1.5); }
     .mdl-slider.is-upgraded:active::-moz-range-thumb {
       background-image: none;
-      background: rgb(0,68,148);
+      background: rgb(255,255,255);
       transform: scale(1.5); }
     .mdl-slider.is-upgraded::-ms-thumb {
       width: 32px;
       height: 32px;
       border: none;
       border-radius: 50%;
-      background: rgb(0,68,148);
+      background: rgb(255,255,255);
       transform: scale(0.375);
       transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1); }
     .mdl-slider.is-upgraded:focus:not(:active)::-ms-thumb {
-      background: radial-gradient(circle closest-side, rgb(0,68,148) 0%, rgb(0,68,148) 37.5%, rgba(0,68,148, 0.26) 37.5%, rgba(0,68,148, 0.26) 100%);
+      background: radial-gradient(circle closest-side, rgb(255,255,255) 0%, rgb(255,255,255) 37.5%, rgba(255,255,255, 0.26) 37.5%, rgba(255,255,255, 0.26) 100%);
       transform: scale(1); }
     .mdl-slider.is-upgraded:active::-ms-thumb {
-      background: rgb(0,68,148);
+      background: rgb(255,255,255);
       transform: scale(0.5625); }
     .mdl-slider.is-upgraded.is-lowest-value::-webkit-slider-thumb {
       border: 2px solid rgba(0,0,0, 0.26);
@@ -8026,7 +8034,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   transform: translate(0, -1px); }
 
 .mdl-slider__background-lower {
-  background: rgb(0,68,148);
+  background: rgb(255,255,255);
   flex: 0;
   position: relative;
   border: 0;
@@ -8475,28 +8483,28 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 .mdl-spinner__layer-1 {
   border-color: rgb(66,165,245); }
   .mdl-spinner--single-color .mdl-spinner__layer-1 {
-    border-color: rgb(0,68,148); }
+    border-color: rgb(255,255,255); }
   .mdl-spinner.is-active .mdl-spinner__layer-1 {
     animation: mdl-spinner__fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, mdl-spinner__layer-1-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both; }
 
 .mdl-spinner__layer-2 {
   border-color: rgb(244,67,54); }
   .mdl-spinner--single-color .mdl-spinner__layer-2 {
-    border-color: rgb(0,68,148); }
+    border-color: rgb(255,255,255); }
   .mdl-spinner.is-active .mdl-spinner__layer-2 {
     animation: mdl-spinner__fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, mdl-spinner__layer-2-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both; }
 
 .mdl-spinner__layer-3 {
   border-color: rgb(253,216,53); }
   .mdl-spinner--single-color .mdl-spinner__layer-3 {
-    border-color: rgb(0,68,148); }
+    border-color: rgb(255,255,255); }
   .mdl-spinner.is-active .mdl-spinner__layer-3 {
     animation: mdl-spinner__fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, mdl-spinner__layer-3-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both; }
 
 .mdl-spinner__layer-4 {
   border-color: rgb(76,175,80); }
   .mdl-spinner--single-color .mdl-spinner__layer-4 {
-    border-color: rgb(0,68,148); }
+    border-color: rgb(255,255,255); }
   .mdl-spinner.is-active .mdl-spinner__layer-4 {
     animation: mdl-spinner__fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, mdl-spinner__layer-4-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both; }
 
@@ -8872,7 +8880,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   border-radius: 14px;
   cursor: pointer; }
   .mdl-switch.is-checked .mdl-switch__track {
-    background: rgba(0,68,148, 0.5); }
+    background: rgba(255,255,255, 0.5); }
   .mdl-switch__track fieldset[disabled] .mdl-switch, .mdl-switch.is-disabled .mdl-switch__track {
     background: rgba(0,0,0, 0.12);
     cursor: auto; }
@@ -8891,7 +8899,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: left; }
   .mdl-switch.is-checked .mdl-switch__thumb {
-    background: rgb(0,68,148);
+    background: rgb(255,255,255);
     left: 16px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12); }
   .mdl-switch__thumb fieldset[disabled] .mdl-switch, .mdl-switch.is-disabled .mdl-switch__thumb {
@@ -8913,8 +8921,8 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     box-shadow: 0 0 0px 20px rgba(0, 0, 0, 0.1);
     background-color: rgba(0, 0, 0, 0.1); }
   .mdl-switch.is-focused.is-checked .mdl-switch__focus-helper {
-    box-shadow: 0 0 0px 20px rgba(0,68,148, 0.26);
-    background-color: rgba(0,68,148, 0.26); }
+    box-shadow: 0 0 0px 20px rgba(255,255,255, 0.26);
+    background-color: rgba(255,255,255, 0.26); }
 
 .mdl-switch__label {
   position: relative;
@@ -8943,7 +8951,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   transition-timing-function: step-end;
   transition-property: left; }
   .mdl-switch__ripple-container .mdl-ripple {
-    background: rgb(0,68,148); }
+    background: rgb(255,255,255); }
   .mdl-switch__ripple-container fieldset[disabled] .mdl-switch, .mdl-switch.is-disabled .mdl-switch__ripple-container {
     cursor: auto; }
   fieldset[disabled] .mdl-switch .mdl-switch__ripple-container .mdl-ripple, .mdl-switch.is-disabled .mdl-switch__ripple-container .mdl-ripple {
@@ -9158,7 +9166,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     bottom: 0px;
     left: 0px;
     position: absolute;
-    background: rgb(0,68,148);
+    background: rgb(255,255,255);
     animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s alternate forwards;
     transition: all 1s cubic-bezier(0.4, 0, 1, 1); }
   .mdl-tabs__tab .mdl-tabs__ripple-container {
@@ -9171,7 +9179,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     z-index: 1;
     overflow: hidden; }
     .mdl-tabs__tab .mdl-tabs__ripple-container .mdl-ripple {
-      background: rgb(0,68,148); }
+      background: rgb(255,255,255); }
 
 .mdl-tabs__panel {
   display: block; }
@@ -9450,7 +9458,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
   fieldset[disabled] .mdl-textfield .mdl-textfield__label, .mdl-textfield.is-disabled.is-disabled .mdl-textfield__label {
     color: rgba(0,0,0, 0.26); }
   .mdl-textfield--floating-label.is-focused .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label, .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
-    color: rgb(0,68,148);
+    color: rgb(255,255,255);
     font-size: 12px;
     top: 4px;
     visibility: visible; }
@@ -9460,7 +9468,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     color: rgb(213,0,0);
     font-size: 12px; }
   .mdl-textfield__label:after {
-    background-color: rgb(0,68,148);
+    background-color: rgb(255,255,255);
     bottom: 20px;
     content: '';
     height: 2px;
