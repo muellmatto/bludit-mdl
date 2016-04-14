@@ -11,11 +11,11 @@
 
 
                                                 <!-- mdl-color: teal blue-grey deep-purple" -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="background-color: rgb(156,158,159);">                 <!-- Layout --> 
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="background-color: white;">                 <!-- Layout --> 
         <header class="mdl-layout__header" id="ForegroundId1">
             <div class="mdl-layout__header-row" id="ForegroundId2">
                 <span class="mdl-layout-title">                                     <!-- Title -->
-                    <a href="<?php echo $Site->url() ?>" style="color: white; text-decoration: none;">
+                    <a href="<?php echo $Site->url() ?>" style="color: rgb(0,68,148); text-decoration: none;">
                         <img src="<?php echo HTML_PATH_THEME_IMG ?>seht_icon.svg" style="width: auto; height: 42px;" alt="Logo SeHT Münster e.V.">
                         <!-- i class="material-icons">home</i -->
                         <?php echo $Site->title() ?>
@@ -77,18 +77,6 @@
                 
                 <!-- erste Zeile -->
 
-                <div class="mdl-cell mdl-cell--2-col"></div>
-                <div class="mdl-cell mdl-cell--8-col">                              <!-- Logo -->
-                    <div class="seht-card mdl-card mdl-shadow--4dp">
-                        <div class="mdl-card__media">
-                            <img src="<?php echo HTML_PATH_THEME_IMG ?>header.jpg" style="width: 100%; height: auto;" alt="Logo SeHT Münster e.V.">
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <?php echo $Site->description(); ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="mdl-cell mdl-cell--2-col"></div>
 
                 <!-- zweite Zeile -->
 
