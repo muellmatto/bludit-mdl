@@ -9,38 +9,15 @@
                 echo '<div class="mdl-cell mdl-cell--2-col"></div>
                 <div class="mdl-cell mdl-cell--8-col">                              <!-- Logo -->
                     <div class="seht-card mdl-card mdl-shadow--4dp">
-                        <div class="mdl-card__media">
-                            <img src="'.$Page->coverImage().'" alt="Cover Image" style="width: 100%; height: auto;">
+                        <div class="mdl-card__media" style="max-height: 300px;">
+                            <img src="'.$Page->coverImage().'" alt="Cover Image" style="width: 100%; max-height: 300px; object-fit: contain;">
                         </div>
                     </div>
                 </div>
                 <div class="mdl-cell mdl-cell--2-col"></div>';
 
-            // echo '<a href="'.$Page->permalink().'" class="image featured"><img src="'.$Page->coverImage().'" alt="Cover Image"></a>';
-
         }
     ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="mdl-cell mdl-cell--2-col"></div>
