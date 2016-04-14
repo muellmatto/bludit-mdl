@@ -9,7 +9,7 @@
                 echo '<div class="mdl-cell mdl-cell--2-col"></div>
                 <div class="mdl-cell mdl-cell--8-col">                              <!-- Logo -->
                     <div class="seht-card mdl-card mdl-shadow--4dp">
-                        <div class="mdl-card__media" style="max-height: 300px;">
+                        <div class="mdl-card__media" style="max-height: 300px; background-color: white;">
                             <img src="'.$Page->coverImage().'" alt="Cover Image" style="width: 100%; max-height: 300px; object-fit: contain;">
                         </div>
                     </div>
