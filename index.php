@@ -24,7 +24,7 @@
                 <div class="mdl-layout-spacer">
                 </div>
                 <nav class="mdl-navigation mdl-layout--large-screen-only">                                     <!-- Menu in der Leiste -->
-                    <a class="mdl-navigation__link" href="kontakt">
+                    <a class="mdl-navigation__link" href="<?php echo $Site->url() ?>kontakt">
                         <i class="material-icons">contact_phone</i>
                         Kontakt
                     </a>
