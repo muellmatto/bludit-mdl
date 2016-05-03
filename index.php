@@ -28,6 +28,26 @@
                         <i class="material-icons">contact_phone</i>
                         Kontakt
                     </a>
+
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <div class="mdl-textfield__expandable-holder">
+                            <script>
+                                function search(suchText) {
+                                    if(event.keyCode == 13) {
+                                        window.location = "<?php echo $Site->url(); ?>blog/"+suchText.value;        
+                                    }
+                                }
+                            </script> 
+                            <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp" 
+                                onkeydown="search(this)">
+                        </div>
+                    </div>
+
+
+
                 </nav>
 
             </div>
@@ -77,7 +97,7 @@
                 <!-- zweite Zeile -->
 
                     <?php
-                        if( ($Url->whereAmI()=='home') ||  ($Url->whereAmI()=='blog') || ($Url->whereAmI()=='tag') ) {
+                        if( ($Url->whereAmI()=='home') ||  ($Url->whereAmI()=='blog') || ($Url->whereAmI()=='tag') || ($Url->whereAmI()=='search') ) {
                             include(PATH_THEME_PHP.'home.php');
                         } elseif($Url->whereAmI()=='post') {
                             include(PATH_THEME_PHP.'post.php');

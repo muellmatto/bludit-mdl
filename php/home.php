@@ -8,8 +8,32 @@
             if ( ($Url->whereAmI() == 'home') || ($Url->whereAmI()=='blog') ) {
                 $totalPublishedPosts = $dbPosts->numberPost(true);
                 $posts = buildPostsForPage(0, $totalPublishedPosts, true, false);
+                if ( substr(  $Url->uri(), 6 ) ) {
+                    $searchString =  substr( $Url->uri(), 6);
+                    foreach ($posts as $Post) {
+                        if ( (stripos($Post->content(true), $searchString) !== false) || ( stripos($Post->title(), $searchString) !== false) ) {
+                        // if ( preg_match('/'.$searchString.'/', $Post->content(true) )) {
+                            $filteredList[] = $Post;
+                        }
+                    }
+
+                    $parents = $pagesParents[NO_PARENT_CHAR];
+                    foreach($parents as $Post) {
+                        if ( (stripos($Post->content(true), $searchString) !== false) || ( stripos($Post->title(), $searchString) !== false) ) {
+                        // if ( preg_match('/'.$searchString.'/', $Post->content(true) )) {
+                            $filteredList[] = $Post;
+                        }
+
+                    }
+
+                    if ( isset($filteredList) ) {
+                        $posts = $filteredList;
+                    } else {
+                        echo '<div class="mdl-cell mdl-cell--12-col mdl-typography--display-4">nichts gefunden</div>';
+                    }
+                }
             }
-            foreach ($posts as $Post): 
+            foreach ($posts as $Post):
         ?>
 
 
