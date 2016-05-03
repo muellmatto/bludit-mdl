@@ -5,8 +5,10 @@
     <div class="mdl-grid">                  <!-- nested grid -->
 
         <?php
-            $totalPublishedPosts = $dbPosts->numberPost(true);
-            $posts = buildPostsForPage(0, $totalPublishedPosts, true, false);
+            if ( ($Url->whereAmI() == 'home') || ($Url->whereAmI()=='blog') ) {
+                $totalPublishedPosts = $dbPosts->numberPost(true);
+                $posts = buildPostsForPage(0, $totalPublishedPosts, true, false);
+            }
             foreach ($posts as $Post): 
         ?>
 
