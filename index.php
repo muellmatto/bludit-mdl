@@ -116,6 +116,7 @@
                 </div>
                 <div class="mdl-mini-footer__right-section">
                     <ul class="mdl-mini-footer__link-list">
+                        <li><a href="<?php echo $Site->url();?>kontakt/impressum">Impressum</a></li>
                         <li>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-layout--small-screen-only">
                                 <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-footer-exp">
@@ -127,7 +128,6 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#">Privacy & Terms</a></li>
                     </ul>
                 </div>
             </footer>
