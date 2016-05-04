@@ -108,6 +108,11 @@
             }
         }
 
+        function search(suchText, keyEvent) {
+            if( keyEvent.keyCode == 13 ) {
+                window.location = "<?php echo $Site->url(); ?>blog/"+suchText.value;        
+            }
+        }
 </script>
 
 

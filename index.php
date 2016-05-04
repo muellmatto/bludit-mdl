@@ -34,15 +34,8 @@
                             <i class="material-icons">search</i>
                         </label>
                         <div class="mdl-textfield__expandable-holder">
-                            <script>
-                                function search(suchText) {
-                                    if(event.keyCode == 13) {
-                                        window.location = "<?php echo $Site->url(); ?>blog/"+suchText.value;        
-                                    }
-                                }
-                            </script> 
                             <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp" 
-                                onkeydown="search(this)">
+                                onkeypress="return search(this, event)">
                         </div>
                     </div>
 
@@ -123,6 +116,17 @@
                 </div>
                 <div class="mdl-mini-footer__right-section">
                     <ul class="mdl-mini-footer__link-list">
+                        <li>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-layout--small-screen-only">
+                                <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-footer-exp">
+                                    <i class="material-icons">search</i>
+                                </label>
+                                <div class="mdl-textfield__expandable-holder">
+                                    <input class="mdl-textfield__input" type="text" name="sample" id="fixed-footer-exp" 
+                                        onkeypress="return search(this, event)">
+                                </div>
+                            </div>
+                        </li>
                         <li><a href="#">Privacy & Terms</a></li>
                     </ul>
                 </div>
