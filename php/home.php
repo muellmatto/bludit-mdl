@@ -29,7 +29,21 @@
                     if ( isset($filteredList) ) {
                         $posts = $filteredList;
                     } else {
-                        echo '<div class="mdl-cell mdl-cell--12-col mdl-typography--display-4">nichts gefunden</div>';
+                        echo    '<div class="mdl-cell mdl-cell--12-col">
+                                    <div class="seht-card mdl-card mdl-shadow--4dp">
+                                        <div class="mdl-card__title">    
+                                            <h2 class="mdl-card__title-text">
+                                                nichts gefunden
+                                            </h2>
+                                        </div>
+                                        <div class="mdl-card__supporting-text">
+                                            Hier sind die Letztens Posts:
+                                        </div>
+                                        <div class="mdl-card__menu">
+                                                <i class="material-icons">cancel</i> 
+                                        </div>
+                                    </div>
+                                </div>';
                     }
                 }
             }
