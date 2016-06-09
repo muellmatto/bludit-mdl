@@ -1,4 +1,8 @@
-
+<script>
+    function deleteIdContent(Id) {
+        Id.innerHTML='';
+    }
+</script>
 <div class="mdl-cell mdl-cell--2-col"></div>
 
 <div class="mdl-cell mdl-cell--8-col">
@@ -8,8 +12,8 @@
             if ( ($Url->whereAmI() == 'home') || ($Url->whereAmI()=='blog') ) {
                 $totalPublishedPosts = $dbPosts->numberPost(true);
                 $posts = buildPostsForPage(0, $totalPublishedPosts, true, false);
-                if ( substr(  $Url->uri(), 6 ) ) {
-                    $searchString =  substr( $Url->uri(), 6);
+                if ( substr(  $Url->uri(), 13 ) ) {
+                    $searchString =  substr( $Url->uri(), 13);
                     foreach ($posts as $Post) {
                         if ( (stripos($Post->content(true), $searchString) !== false) || ( stripos($Post->title(), $searchString) !== false) ) {
                         // if ( preg_match('/'.$searchString.'/', $Post->content(true) )) {
@@ -29,7 +33,7 @@
                     if ( isset($filteredList) ) {
                         $posts = $filteredList;
                     } else {
-                        echo    '<div class="mdl-cell mdl-cell--12-col">
+                        echo    '<div class="mdl-cell mdl-cell--12-col" id="notFound">
                                     <div class="seht-card mdl-card mdl-shadow--4dp">
                                         <div class="mdl-card__title">    
                                             <h2 class="mdl-card__title-text">
@@ -40,7 +44,9 @@
                                             Hier sind die Letztens Posts:
                                         </div>
                                         <div class="mdl-card__menu">
-                                                <i class="material-icons">cancel</i> 
+                                            <button onclick="deleteIdContent(notFound)" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                                <i class="material-icons">cancel</i>
+                                            </button> 
                                         </div>
                                     </div>
                                 </div>';
