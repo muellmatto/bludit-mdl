@@ -24,6 +24,10 @@
                 <div class="mdl-layout-spacer">
                 </div>
                 <nav class="mdl-navigation mdl-layout--large-screen-only">                                     <!-- Menu in der Leiste -->
+                    <a class="mdl-navigation__link" href="<?php echo $Site->url() ?>jipa">
+                        <img src="<?php echo HTML_PATH_THEME_IMG ?>jipa_icon.svg" style="width: auto; height: 24px;" alt="JIPA">
+                    </a>
+
                     <a class="mdl-navigation__link" href="<?php echo $Site->url() ?>kontakt">
                         <i class="material-icons">contact_phone</i>
                         Kontakt
@@ -56,21 +60,28 @@
                             //  pages
                             $parents = $pagesParents[NO_PARENT_CHAR];
                             foreach($parents as $Parent) {
-                                if($Parent->title()=='SeHT Münster e.V.') {
-                                    $icon='home';
-                                } elseif($Parent->title()=='Team') {
-                                    $icon='face';
-                                } elseif($Parent->title()=='Angebote') {
-                                    $icon='group';
-                                } elseif($Parent->title()=='Downloads') {
-                                    $icon='get_app';
-                                } elseif($Parent->title()=='Kontakt') {
-                                    // $icon='account_circle';
-                                    $icon='contact_phone';
-                                } else {
-                                    $icon='info';
-                                }
-                                    echo '<a class="mdl-navigation__link" href="'.$Parent->permalink().'">'.'<i class="material-icons">'.$icon.'</i> '.$Parent->title().'</a>';
+				if ( $Parent->title() == 'JIPA' ) {
+                                    echo '<a class="mdl-navigation__link" href="'.$Site->url().'jipa">
+                                              <img src="'.HTML_PATH_THEME_IMG.'jipa_icon_menu.svg" style="width: auto; height: 24px;" alt="JIPA">
+                                          </a>';
+					// ooo
+				} else {
+					if($Parent->title()=='SeHT Münster e.V.') {
+					    $icon='home';
+					} elseif($Parent->title()=='Team') {
+					    $icon='face';
+					} elseif($Parent->title()=='Angebote') {
+					    $icon='group';
+					} elseif($Parent->title()=='Downloads') {
+					    $icon='get_app';
+					} elseif($Parent->title()=='Kontakt') {
+					    // $icon='account_circle';
+					    $icon='contact_phone';
+					} else {
+					    $icon='info';
+					}
+					    echo '<a class="mdl-navigation__link" href="'.$Parent->permalink().'">'.'<i class="material-icons">'.$icon.'</i> '.$Parent->title().'</a>';
+				}
                             }
                         ?>
                         <a class="mdl-navigation__link" href="<?php echo $Site->url() ?>admin"><i class="material-icons">vpn_key</i>Login</a>
