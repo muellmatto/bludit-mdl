@@ -20,6 +20,12 @@
     ?>
 
 
+<style>
+    img {
+        max-width: 100%
+    }
+</style>
+
 <div class="mdl-cell mdl-cell--2-col"></div>
 
 <div class="mdl-cell mdl-cell--8-col">
@@ -32,6 +38,61 @@
         </div>
 
         <div class="mdl-card__supporting-text">
+
+        <?php
+            if ( $Page->title() == 'JIPA' || in_array( $Page, $pagesParents['jipa']) ) {
+                echo '
+                    <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon mdl-layout--small-screen-only">
+                        <i class="material-icons">more_vert</i>
+                    </button>
+                    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
+                        <li class="mdl-menu__item">
+                            JIPA Münster
+                        </li>
+                ';
+
+
+                $children = $pagesParents['jipa'];
+
+                foreach($children as $Child) {
+                    echo '
+                        <li class="mdl-menu__item">'
+                        . $Child->title()
+                        . '</li>
+                    ';
+                }
+                echo '</ul>';
+
+
+                echo '
+                    <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-layout--large-screen-only" ' 
+                    . ' style="margin-bottom: 5px;"'
+                    . ' href="'
+                    . $Site->url()
+                    .'jipa">
+                        JIPA Münster
+                    </a>
+                    ';
+                foreach($children as $Child) {
+                    echo '
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-layout--large-screen-only" '
+                        . ' style="margin-bottom: 5px;"'
+                        . ' href="'
+                        . $Child->Permalink()
+                        . '">'
+                        . $Child->title()
+                        . '</a>';
+                }
+
+
+            } 
+        ?>
+
+
+
+
+
+
             <inhalt>
                 <?php echo $Page->content() ?>
             </inhalt>
