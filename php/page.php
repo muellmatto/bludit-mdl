@@ -104,9 +104,12 @@
                             <i class="material-icons">touch_app</i>
                         </button>
                         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="jipa-small-menu">
-                            <li class="mdl-menu__item">
+                            <a class="mdl-menu__item" '
+                            . ' href="'
+                            . $Site->url()
+                            .'jipa">
                                 JIPA Münster
-                            </li>
+                            </a>
                     ';
 
 
@@ -114,9 +117,11 @@
 
                     foreach($children as $Child) {
                         echo '
-                            <li class="mdl-menu__item">'
+                            <a class="mdl-menu__item" href="'
+                            . $Child->Permalink()
+                            . '">'
                             . $Child->title()
-                            . '</li>
+                            . '</a>
                         ';
                     }
                     echo '</ul>';
