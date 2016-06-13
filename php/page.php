@@ -79,7 +79,7 @@
         <?php
         if ( $Page->title() == 'JIPA' || in_array( $Page, $pagesParents['jipa']) ) {
                 echo '
-                    <button class="mdl-button mdl-js-button mdl-button--fab" onclick="alert(\'Das Copyright dafür besitzt die Lebenshilfe für Menschen mit geistiger Behinderung Bremen e.V., Illustrator Stefan Albers, Atelier Fleetinsel, 2013\');">
+                    <button class="mdl-button mdl-js-button mdl-button--fab" onclick="alert(\'Das Copyright für die gezeichneten Bilder besitzt die Lebenshilfe für Menschen mit geistiger Behinderung Bremen e.V., Illustrator Stefan Albers, Atelier Fleetinsel, 2013\');">
                     <i class="material-icons">copyright</i>
                     </button>
                     ';
