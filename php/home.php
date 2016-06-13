@@ -13,7 +13,9 @@
                 $totalPublishedPosts = $dbPosts->numberPost(true);
                 $posts = buildPostsForPage(0, $totalPublishedPosts, true, false);
                 if ( substr(  $Url->uri(), 13 ) ) {
-                    $searchString =  substr( $Url->uri(), 13);
+                    $searchString =  substr( $Url->uri(),
+                        (strlen($Site->url()) - strlen(DOMAIN) + 5)
+                    );
                     foreach ($posts as $Post) {
                         if ( (stripos($Post->content(true), $searchString) !== false) || ( stripos($Post->title(), $searchString) !== false) ) {
                         // if ( preg_match('/'.$searchString.'/', $Post->content(true) )) {
