@@ -12,7 +12,9 @@
             if ( ($Url->whereAmI() == 'home') || ($Url->whereAmI()=='blog') ) {
                 $totalPublishedPosts = $dbPosts->numberPost(true);
                 $posts = buildPostsForPage(0, $totalPublishedPosts, true, false);
-                if ( substr(  $Url->uri(), 13 ) ) {
+                if ( substr(  $Url->uri(), 
+                        (strlen($Site->url()) - strlen(DOMAIN) + 5)
+                     ) ) {
                     $searchString =  substr( $Url->uri(),
                         (strlen($Site->url()) - strlen(DOMAIN) + 5)
                     );
