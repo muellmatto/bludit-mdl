@@ -41,27 +41,6 @@
 
         <?php
             if ( $Page->title() == 'JIPA' || in_array( $Page, $pagesParents['jipa']) ) {
-                echo '
-                    <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon mdl-layout--small-screen-only">
-                        <i class="material-icons">more_vert</i>
-                    </button>
-                    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
-                        <li class="mdl-menu__item">
-                            JIPA Münster
-                        </li>
-                ';
-
-
-                $children = $pagesParents['jipa'];
-
-                foreach($children as $Child) {
-                    echo '
-                        <li class="mdl-menu__item">'
-                        . $Child->title()
-                        . '</li>
-                    ';
-                }
-                echo '</ul>';
 
 
                 echo '
@@ -73,6 +52,7 @@
                         JIPA Münster
                     </a>
                     ';
+                $children = $pagesParents['jipa'];
                 foreach($children as $Child) {
                     echo '
                         <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-layout--large-screen-only" '
@@ -105,6 +85,35 @@
             <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--primary mdl-js-ripple-effect" onclick="toggleSpeech()">
                 <i class="material-icons" id="SpeechToggleId">hearing</i>
             </button>
+
+            <?php
+                if ( $Page->title() == 'JIPA' || in_array( $Page, $pagesParents['jipa']) ) {
+                    echo '
+                        <button id="jipa-small-menu" 
+                                    class="mdl-button mdl-js-button mdl-button--fab mdl-button--primary 
+                                            mdl-js-ripple-effect mdl-layout--small-screen-only">
+                            <i class="material-icons">touch_app</i>
+                        </button>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="jipa-small-menu">
+                            <li class="mdl-menu__item">
+                                JIPA Münster
+                            </li>
+                    ';
+
+
+                    $children = $pagesParents['jipa'];
+
+                    foreach($children as $Child) {
+                        echo '
+                            <li class="mdl-menu__item">'
+                            . $Child->title()
+                            . '</li>
+                        ';
+                    }
+                    echo '</ul>';
+
+                }
+            ?>
         </div>
     </div>
 </div>
