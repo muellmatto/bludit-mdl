@@ -6,15 +6,15 @@
     <?php
         if($Page->coverImage()) {
 
-                echo '<div class="mdl-cell mdl-cell--2-col"></div>
-                <div class="mdl-cell mdl-cell--8-col">                              <!-- Logo -->
+            echo '
+                <div class="mdl-cell mdl-cell--12-col">                              <!-- Logo -->
                     <div class="seht-card mdl-card mdl-shadow--4dp">
                         <div class="mdl-card__media" style="max-height: 300px; background-color: white;">
                             <img src="'.$Page->coverImage().'" alt="Cover Image" style="width: 100%; max-height: 300px; object-fit: contain;">
                         </div>
                     </div>
                 </div>
-                <div class="mdl-cell mdl-cell--2-col"></div>';
+                ';
 
         }
     ?>
@@ -26,9 +26,8 @@
     }
 </style>
 
-<div class="mdl-cell mdl-cell--2-col"></div>
 
-<div class="mdl-cell mdl-cell--8-col">
+<div class="mdl-cell mdl-cell--12-col">
     <div class="seht-card mdl-card mdl-shadow--4dp">
 
         <div class="mdl-card__title">
@@ -132,6 +131,5 @@
     </div>
 </div>
 
-<div class="mdl-cell mdl-cell--2-col"></div>
 
 <?php Theme::plugins('pageEnd') ?>

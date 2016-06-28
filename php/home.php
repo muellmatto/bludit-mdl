@@ -3,34 +3,38 @@
         Id.innerHTML='';
     }
 </script>
-<div class="mdl-cell mdl-cell--2-col"></div>
 
-<div class="mdl-cell mdl-cell--8-col">
-    <div class="mdl-grid">                  <!-- nested grid -->
 
         <?php
             if ( ($Url->whereAmI() == 'home') || ($Url->whereAmI()=='blog') ) {
                 $totalPublishedPosts = $dbPosts->numberPost(true);
                 $posts = buildPostsForPage(0, $totalPublishedPosts, true, false);
-                if ( substr(  $Url->uri(), 
-                        (strlen($Site->url()) - strlen(DOMAIN) + 5)
-                     ) ) {
-                    $searchString =  substr( $Url->uri(),
-                        (strlen($Site->url()) - strlen(DOMAIN) + 5)
-                    );
+                $searchString =  substr( $Url->uri(), (strlen($Site->url()) - strlen(DOMAIN) + 5) );
+                if ( $searchString  ) {
+
                     foreach ($posts as $Post) {
                         if ( (stripos($Post->content(true), $searchString) !== false) || ( stripos($Post->title(), $searchString) !== false) ) {
-                        // if ( preg_match('/'.$searchString.'/', $Post->content(true) )) {
                             $filteredList[] = $Post;
                         }
                     }
 
                     $parents = $pagesParents[NO_PARENT_CHAR];
-                    foreach($parents as $Post) {
-                        if ( (stripos($Post->content(true), $searchString) !== false) || ( stripos($Post->title(), $searchString) !== false) ) {
-                        // if ( preg_match('/'.$searchString.'/', $Post->content(true) )) {
-                            $filteredList[] = $Post;
+                    foreach($parents as $Parent) {
+                        if ( (stripos($Parent->content(true), $searchString) !== false) || ( stripos($Parent->title(), $searchString) !== false) ) {
+                            $filteredList[] = $Parent;
                         }
+
+                        
+                        if ( isset( $pagesParents[$Parent->key()]  )  ) {
+                            $children = $pagesParents[$Parent->key()];
+                            foreach($children as $Child){
+                                if ( (stripos($Child->content(true), $searchString) !== false) || ( stripos($Child->title(), $searchString) !== false) ) {
+                                    $filteredList[] = $Child;
+                                }
+                            }
+                        }
+
+
 
                     }
 
@@ -91,11 +95,6 @@
         <?php
             endforeach; 
         ?>
-    </div>                                  <!-- nested grid end -->
-</div>
-
-
-<div class="mdl-cell mdl-cell--2-col"></div>
 
 
 

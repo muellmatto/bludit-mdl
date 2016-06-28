@@ -93,7 +93,7 @@
 
 
         <main class="mdl-layout__content">                                          <!-- Content -->
-            <div class="mdl-grid">
+            <div class="mdl-grid" style="max-width: 1000px">
                 
                 <!-- erste Zeile -->
 
