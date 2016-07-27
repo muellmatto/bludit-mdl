@@ -37,21 +37,46 @@
         </div>
 
         <div class="mdl-card__supporting-text">
-
         <?php
-            if ( $Page->title() == 'JIPA' || in_array( $Page, $pagesParents['jipa']) ) {
-
+            // echo "Page-Object: " . "<br>";
+            // echo print_r($Page). "<br>";
+            // echo "Page-parentkey: " . "<br>";
+            // echo $Page->parentKey() . "<br>";
+            // echo "Page-key: " . "<br>";
+            // echo $Page->key() . "<br>";
+            // echo "pagesParents: " . "<br>";
+            // array with keys from parents:
+            // echo print_r(array_keys($pagesParents)) . "<br>";
+            // if ( array_key_exists( $Page->key(),  $pagesParents ) ) {
+            //     echo "current page childs: <br>";
+            //     echo print_r(array_keys($pagesParents[$Page->key()])) . "<br>";
+            // } else {
+            //     echo "Page has no childs!";
+            // }
+        ?>
+        <?php
+            // check if page has childs or is child
+            if ( array_key_exists( $Page->key() , $pagesParents ) || $Page->parentKey() ) {
+                // get children if Parent or siblings if child
+                if ($Page->parentKey()) {
+                    $ParentKey = $Page->parentKey();
+                    $children = $pagesParents[$Page->parentKey()];
+                } else {
+                    $ParentKey = $Page->key();
+                    $children = $pagesParents[$Page->key()];
+                }
 
                 echo '
                     <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-layout--large-screen-only" ' 
                     . ' style="margin-bottom: 5px;"'
                     . ' href="'
                     . $Site->url()
-                    .'jipa">
-                        JIPA Münster
-                    </a>
+                    . $ParentKey
+                    .'">'
+                    . $ParentKey
+                    . '</a>
                     ';
-                $children = $pagesParents['jipa'];
+                // $children = $pagesParents['jipa'];
                 foreach($children as $Child) {
                     echo '
                         <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-layout--large-screen-only" '
@@ -95,7 +120,15 @@
             </button>
 
             <?php
-                if ( $Page->title() == 'JIPA' || in_array( $Page, $pagesParents['jipa']) ) {
+            if ( array_key_exists( $Page->key() , $pagesParents ) || $Page->parentKey() ) {
+                // get children if Parent or siblings if child
+                if ($Page->parentKey()) {
+                    $ParentKey = $Page->parentKey();
+                    $children = $pagesParents[$Page->parentKey()];
+                } else {
+                    $ParentKey = $Page->key();
+                    $children = $pagesParents[$Page->key()];
+                }
                     echo '
                         <button id="jipa-small-menu" 
                                     class="mdl-button mdl-js-button mdl-button--fab mdl-button--primary 
@@ -106,13 +139,13 @@
                             <a class="mdl-menu__item" '
                             . ' href="'
                             . $Site->url()
-                            .'jipa">
-                                JIPA Münster
-                            </a>
-                    ';
+                            . $ParentKey
+                            .'">'
+                            . $ParentKey
+                            . '</a>
+                            ';
 
 
-                    $children = $pagesParents['jipa'];
 
                     foreach($children as $Child) {
                         echo '
