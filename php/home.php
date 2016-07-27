@@ -74,7 +74,7 @@
                         </h2>
                     </div>
 
-                    <div class="mdl-card__supporting-text" style="min-height: 200px">
+                    <div class="mdl-card__supporting-text" style="height: 220px">
                         <?php
                             echo $Post->date();
                             // Call the method with FALSE to get the first part of the post
