@@ -30,8 +30,8 @@
 <div class="mdl-cell mdl-cell--12-col">
     <div class="seht-card mdl-card mdl-shadow--4dp">
 
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">
+        <div class="mdl-card__title" style="background-color: rgb(0,68,148); height: 120px;">
+            <h2 class="mdl-card__title-text" style="font-size: 32px; color: white;">
                 <?php echo $Page->title() ?>
             </h2>
         </div>
